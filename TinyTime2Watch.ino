@@ -1,7 +1,7 @@
-/* Tiny Time 2 Watch
-   ATtiny85 @ 8 MHz (internal oscillator; BOD disabled)
+/* Tiny Time 2 Watch v2 - see http://www.technoblogy.com/show?1MG3
 
-   David Johnson-Davies - www.technoblogy.com - 11th April 2017
+   David Johnson-Davies - www.technoblogy.com - 30th May 2019
+   ATtiny85 @ 8 MHz (internal oscillator; BOD disabled)
    
    CC BY 4.0
    Licensed under a Creative Commons Attribution 4.0 International license: 
@@ -205,7 +205,7 @@ void loop () {
   secs = rtc.seconds;
   //
   // Then display it  
-  Hours = (unsigned long)((secs+1859)/3600)%12;
+  Hours = (unsigned long)((secs+1800)/3600)%12;
   Fivemins = 12;
   int Mins = (unsigned long)(secs/60)%60;
   int From = Mins/5;
